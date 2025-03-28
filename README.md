@@ -63,6 +63,8 @@ This project explores the movie industry to provide insights for a company inter
    - May include additional information such as critics’ scores, audience scores, production budgets, etc.
    - Use these if time permits to further enhance the analysis.
 
+
+
 ### Data Descriptions
 
 <details>
