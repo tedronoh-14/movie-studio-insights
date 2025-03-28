@@ -67,8 +67,6 @@ This project explores the movie industry to provide insights for a company inter
 
 ### Data Descriptions
 
-<details>
-  <summary><strong>IMDB Tables (SQLite)</strong></summary>
 
   - **`movie_basics`**
     - `movie_id`: Unique identifier (often `tconst` in IMDB’s original data).
@@ -85,10 +83,7 @@ This project explores the movie industry to provide insights for a company inter
   
   - **Other Tables (e.g., `principals`, `directors`, `writers`)**
     - Provide additional details about cast and crew (optional for a basic analysis).
-</details>
 
-<details>
-  <summary><strong>Box Office Mojo (CSV)</strong></summary>
 
   - **`bom.movie_gross.csv.gz`**
     - `title`: Movie title.
