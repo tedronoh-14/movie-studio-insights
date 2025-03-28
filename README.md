@@ -94,5 +94,32 @@ This project explores the movie industry to provide insights for a company inter
     - `domestic_gross`: Revenue from the domestic market (US/Canada).
     - `foreign_gross`: Revenue from international markets.
     - `year`: Release year.
+   
+## Data Limitations
+- **Data Gaps:** Some movies may not have complete information (missing budgets, missing foreign gross, etc.).
+- **Merge Complexity:** The IMDB database uses unique IDs, while Box Office Mojo uses movie titles. Matching them may require careful joining on title and year.
+- **Outliers:** Certain blockbuster films (e.g., *Avengers*) or extremely low-budget films might skew averages.
+- **Time Range:** Ensure the years in each dataset overlap; otherwise, you might be comparing different time periods.
+
+## Data Preparation Strategy
+
+### Merging
+- **Merge Approach:**  
+  - Merge IMDB data with Box Office Mojo on movie title and release year (or using an approximate matching technique if necessary).
+  - Alternatively, keep the datasets separate if merging is too challenging or results in a limited subset of data.
+
+### Cleaning
+- **Handling Missing Values:**  
+  - Remove or impute missing values where appropriate.
+- **Data Type Conversion:**  
+  - Convert currency columns to numeric types for accurate analysis.
+- **Genre Processing:**  
+  - Decide whether to split genres into multiple rows for granular analysis or keep them as a single string.
+
+### Feature Engineering 
+- **Profit/ROI Calculation:**  
+  - Creating a `profit` or `ROI` column if budget data is available.
+- **Primary Genre Extraction:**  
+  - Extracting the primary genre when multiple genres are listed (e.g., "Action" from "Action,Comedy").
 
   
