@@ -94,7 +94,9 @@ This project explores the movie industry to provide insights for a company inter
     - `domestic_gross`: Revenue from the domestic market (US/Canada).
     - `foreign_gross`: Revenue from international markets.
     - `year`: Release year.
-   
+
+
+
 ## Data Limitations
 - **Data Gaps:** Some movies may not have complete information (missing budgets, missing foreign gross, etc.).
 - **Merge Complexity:** The IMDB database uses unique IDs, while Box Office Mojo uses movie titles. Matching them may require careful joining on title and year.
