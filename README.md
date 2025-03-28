@@ -33,7 +33,7 @@ This project explores the movie industry to provide insights for a company inter
    - Are longer or shorter films more successful on average?
    - Does a higher IMDB rating or Rotten Tomatoes score correlate with higher revenue?
 
-4. **Which Time of Year is Best for Movie Releases?** *(Optional if data includes release dates)*
+4. **Which Time of Year is Best for Movie Releases?** 
    - Are certain months or seasons historically more profitable?
 
 5. **What Additional Factors Could Drive Success?**
@@ -95,5 +95,4 @@ This project explores the movie industry to provide insights for a company inter
     - `foreign_gross`: Revenue from international markets.
     - `year`: Release year.
 
-  > **Note:** You may need to combine `domestic_gross` and `foreign_gross` into a total `worldwide_gross` for analysis. Some entries might have missing values for `foreign_gross`.
-</details>
+  
