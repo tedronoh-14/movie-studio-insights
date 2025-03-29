@@ -107,3 +107,50 @@ monthly_revenue['worldwide_gross_millions'] = monthly_revenue['worldwide_gross']
 
 # Display the transformed data
 print(monthly_revenue)
+```
+
+
+## Data Limitations
+
+- **Data Gaps:**  
+  Some movies did not have complete information (e.g., missing budgets or missing foreign gross).
+
+- **Merge Complexity:**  
+  The IMDB database used unique IDs, while Box Office Mojo used movie titles. Matching them required careful joining on title and year.
+
+- **Outliers:**  
+  Certain blockbuster films (e.g., *Avengers*) or extremely low-budget films might have skewed averages.
+
+- **Time Range:**  
+  We ensured that the years in each dataset overlapped; otherwise, we might have been comparing different time periods.
+
+## Data Preparation Strategy
+
+### Merging
+
+- **Merge Approach:**  
+  We merged the IMDB data with Box Office Mojo on movie title and release year (using an approximate matching technique when necessary).  
+  In cases where merging proved too challenging or resulted in a limited subset of data, we maintained the datasets separately.
+
+### Cleaning
+
+- **Handling Missing Values:**  
+  We removed or imputed missing values where appropriate.
+
+- **Data Type Conversion:**  
+  We converted currency columns to numeric types for accurate analysis.
+
+- **Genre Processing:**  
+  We decided whether to split genres into multiple rows for more granular analysis or keep them as a single string based on the specific requirements of our analysis.
+
+### Feature Engineering
+
+- **Profit/ROI Calculation:**  
+  We created a `profit` or ROI column when budget data was available.
+
+- **Primary Genre Extraction:**  
+  We extracted the primary genre when multiple genres were listed (e.g., "Action" from "Action,Comedy").
+
+## Analysis & Insights
+
+
