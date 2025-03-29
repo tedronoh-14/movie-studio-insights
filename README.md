@@ -86,29 +86,24 @@ We explored the movie industry to provide insights for a company interested in l
   - `foreign_gross`: Revenue from international markets.  
   - `year`: Release year.
 
-## Data Limitations
-- **Data Gaps:** Some movies did not have complete information (e.g., missing budgets or missing foreign gross).
-- **Merge Complexity:** The IMDB database used unique IDs, while Box Office Mojo used movie titles. Matching them required careful joining on title and year.
-- **Outliers:** Certain blockbuster films (e.g., *Avengers*) or extremely low-budget films might have skewed averages.
-- **Time Range:** We ensured that the years in each dataset overlapped; otherwise, we might have been comparing different time periods.
+## Data Transformation
 
-## Data Preparation Strategy
+### Formatting Worldwide Gross for Readability
 
-### Merging
-- **Merge Approach:**  
-  - We merged the IMDB data with Box Office Mojo on movie title and release year (using an approximate matching technique when necessary).  
-  - In cases where merging proved too challenging or resulted in a limited subset of data, we maintained the datasets separately.
+To make the revenue figures more interpretable, we converted the `release_date` to a datetime object, extracted the month, grouped the data by month, and transformed the `worldwide_gross` figures from raw numbers into millions. This makes the data easier to understand at a glance (e.g., displaying `$50M` instead of `50000000`).
 
-### Cleaning
-- **Handling Missing Values:**  
-  - We removed or imputed missing values where appropriate.  
-- **Data Type Conversion:**  
-  - We converted currency columns to numeric types for accurate analysis.  
-- **Genre Processing:**  
-  - We decided whether to split genres into multiple rows for more granular analysis or keep them as a single string based on the specific requirements of our analysis.
+Below is the code snippet demonstrating this transformation:
 
-### Feature Engineering
-- **Profit/ROI Calculation:**  
-  - We created a `profit` or `ROI` column when budget data was available.  
-- **Primary Genre Extraction:**  
-  - We extracted the primary genre when multiple genres were listed (e.g., "Action" from "Action,Comedy").
+```python
+# Convert release_date to datetime and extract month
+movie_budgets['release_date'] = pd.to_datetime(movie_budgets['release_date'])
+movie_budgets['release_month'] = movie_budgets['release_date'].dt.month
+
+# Group by month and calculate mean worldwide gross
+monthly_revenue = movie_budgets.groupby('release_month')['worldwide_gross'].mean().reset_index()
+
+# Convert worldwide gross to millions for readability
+monthly_revenue['worldwide_gross_millions'] = monthly_revenue['worldwide_gross'] / 1e6
+
+# Display the transformed data
+print(monthly_revenue)
