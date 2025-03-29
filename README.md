@@ -151,6 +151,45 @@ print(monthly_revenue)
 - **Primary Genre Extraction:**  
   We extracted the primary genre when multiple genres were listed (e.g., "Action" from "Action,Comedy").
 
-## Analysis & Insights
+## **Analysis & Insights**  
+
+### **Genre Profitability**  
+- Action and Sci-Fi genres dominate in profitability, generating the highest average box office returns.  
+- These genres tend to have strong international appeal, contributing significantly to foreign gross revenue.  
+
+### **Budget vs. Box Office Performance**  
+- High-budget films generally achieve better returns, but only when supported by strategic marketing and distribution.  
+- While low-budget films can be profitable, their success rate is lower, and they often rely on niche audiences or viral marketing.  
+
+### **Foreign Market Considerations**  
+- Movies with global appeal tend to perform better financially, with foreign box office earnings contributing a major share of total revenue.  
+- Films with minimal dialogue and strong visual storytelling (e.g., action-packed sequences) often succeed internationally.  
+
+### **Release Timing Impact**  
+- Movies released during peak seasons (holidays, summer) see significantly higher box office earnings.  
+- Avoiding release dates that coincide with major blockbusters can improve a film’s performance by reducing direct competition.  
+
+---
+
+## **Recommendations**  
+
+### **Focus on High-Performing Genres**  
+- The studio should prioritize Action and Sci-Fi films, as they offer the best return on investment.  
+- Consider hybrid genres (e.g., Action-Thriller, Sci-Fi-Adventure) to attract wider audiences.  
+
+### **Budget Optimization**  
+- Allocate sufficient funds for both production and marketing, as both are critical for box office success.  
+- If producing lower-budget films, ensure a strong storyline, unique marketing, or a dedicated fanbase to boost profitability.  
+
+### **Global Market Strategy**  
+- Invest in projects with cross-cultural appeal to maximize foreign revenue.  
+- Consider international partnerships for distribution to tap into foreign markets.  
+
+### **Strategic Release Scheduling**  
+- Schedule releases during peak seasons (summer, holiday periods) for maximum audience turnout.  
+- Avoid competing with major franchise films unless the movie has a unique selling proposition.  
+
+By following these insights and recommendations, the new movie studio can improve its chances of creating successful, high-grossing films while minimizing financial risks.
+
 
 
