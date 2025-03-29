@@ -1,13 +1,13 @@
 # Studio Insights
 
 ## Project Overview
-We explored the movie industry to provide insights for a company interested in launching a new movie studio. By analyzing data from multiple sources (IMDB, Box Office Mojo, etc.), we identified the types of films that perform best at the box office and recommended strategies to maximize the success of new film productions.
+Our company is keen on investing in the movie industry. We have decided to create a new movie studio but do not know anything about creating movies. We are tasked with exploring the types of films currently doing the best at the box office. We must then translate those findings into actionable insights that the head of our company's new movie studio can use to help decide what type of films to create.
 
 ## Project Goals
-- **Examined** historical box office performance across various genres, budgets, runtimes, and ratings.  
-- **Identified** key trends or patterns that contribute to a movie’s commercial success.  
-- **Recommended** data-driven strategies to guide the creation and marketing of new films.
-
+* Examine historical box office performance across various genres, budgets, revenues and release dates.
+* Identify key trends that contribute to a movie’s commercial success.
+* Recommend data-driven strategies to guide the creation and marketing of new films.
+  
 ## Why This Project Matters
 - **Competitive Landscape:** Major streaming platforms and traditional studios are heavily investing in original content.  
 - **High Stakes:** Movie production requires significant capital investment; data-driven decisions can mitigate financial risks.  
@@ -29,27 +29,16 @@ We explored the movie industry to provide insights for a company interested in l
    - How did production budgets relate to box office returns?  
    - Was there an optimal budget range that maximized ROI?
 
-3. **How Did Runtime and Ratings Affect Box Office Performance?**  
-   - Were longer or shorter films more successful on average?  
-   - Did a higher IMDB rating or Rotten Tomatoes score correlate with higher revenue?
-
-4. **Which Time of Year Was Best for Movie Releases?**  
+3. **Which Time of Year Was Best for Movie Releases?**  
    - Were certain months or seasons historically more profitable?
 
-5. **What Additional Factors Could Drive Success?**  
-   - Did star power (cast and director influence) play a role?  
-   - How did sequels compare to original films?
+  
 
 ## Data Understanding
 
 ### Data Sources
 
-1. **IMDB (SQLite Database)**
-   - **Tables:**  
-     - `movie_basics`: Contained basic info such as title, year, genres, and runtime.  
-     - `movie_ratings`: Contained the average rating (`avgRating`) and number of votes (`numVotes`).
-
-2. **Box Office Mojo (CSV)**
+1. **Box Office Mojo (CSV)**
    - **File:** `bom.movie_gross.csv.gz`  
    - **Columns (typical):**  
      - `title`: Movie title.  
@@ -58,8 +47,8 @@ We explored the movie industry to provide insights for a company interested in l
      - `foreign_gross`: Revenue from international markets.  
      - `year`: Release year.
 
-3. **Rotten Tomatoes, TheMovieDB, The Numbers**  
-   - We included additional information such as critics’ scores, audience scores, and production budgets as time permitted to further enhance our analysis.
+2. **Movie budgets (CSV)**  
+  
 
 ### Data Descriptions
 
@@ -69,12 +58,7 @@ We explored the movie industry to provide insights for a company interested in l
   - `original_title`: Original title if different from the main one.  
   - `start_year`: Year the movie was first released or produced.  
   - `runtime_minutes`: Length of the movie in minutes.  
-  - `genres`: One or more genres (e.g., "Action,Comedy").
-
-- **`movie_ratings`**  
-  - `movie_id`: Matched the `movie_id` in `movie_basics`.  
-  - `avg_rating`: Average IMDB rating (scale 1–10).  
-  - `num_votes`: Number of votes that contributed to the `avg_rating`.
+  - `genres`: One or more genres (e.g., "Action, Comedy").
 
 - **Other Tables (e.g., `principals`, `directors`, `writers`)**  
   - Provided additional details about cast and crew (optional for a basic analysis).
@@ -150,7 +134,7 @@ print(monthly_revenue)
   We extracted the primary genre when multiple genres were listed (e.g., "Action" from "Action,Comedy").
 
 
-## **Analysis & Insights**  
+## **EXPLORATORY DATA ANALYSIS**  
 
 ### **Genre Profitability**  
 - Action and Sci-Fi genres dominate in profitability, generating the highest average box office returns.  
